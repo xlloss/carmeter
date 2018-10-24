@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/meter">
+        <file>png_rec/MphSpeedMeterBg.png</file>
+        <file>png_rec/NeedleBg.png</file>
+    </qresource>
+</RCC>
