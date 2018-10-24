@@ -25,13 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        speed_meter.cpp \
+    mainform.cpp
 
 HEADERS += \
-        widget.h
+        speed_meter.h \
+    mainform.h
 
 FORMS += \
-        widget.ui
+        speed_meter.ui \
+    mainform.ui
 
 RESOURCES += \
     png_file.qrc
