@@ -1,5 +1,5 @@
-#include "widget.h"
-#include "ui_widget.h"
+#include "speed_meter.h"
+#include "ui_speed_meter.h"
 #include <QPainter>
 #include <qdebug.h>
 #include <QTimer>
@@ -15,16 +15,18 @@
 #define DIR_RIGHT 0
 #define DIR_LEFT 1
 
-Widget::Widget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Widget)
+SpeedMeter::SpeedMeter(QWidget *parent) :
+    QWidget(parent)
+    //,ui(new Ui::SpeedMeter)
 {
     QTimer *timer = new QTimer(this);;
     QPalette palette;
 
-    ui->setupUi(this);
+//    ui->setupUi(this);
 
     speed_meter_img.load(":/meter/png_rec/MphSpeedMeterBg.png");
+    width = speed_meter_img.width();
+    height = speed_meter_img.height();
 
     if (speed_need_img.load(":/meter/png_rec/NeedleBg.png") == false)
         qDebug("speed_need_img load fail");
@@ -40,12 +42,12 @@ Widget::Widget(QWidget *parent) :
     rot_dir = DIR_RIGHT;
 }
 
-Widget::~Widget()
+SpeedMeter::~SpeedMeter()
 {
-    delete ui;
+//    delete ui;
 }
 
-void Widget::timout_update()
+void SpeedMeter::timout_update()
 {
     if (rot_cnt >= SPPED_140) {
         rot_dir = DIR_LEFT;
@@ -61,10 +63,11 @@ void Widget::timout_update()
     update();
 }
 
-void Widget::paintEvent(QPaintEvent *)
+void SpeedMeter::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
     QTransform trans;
+    painter.drawPixmap(0, 0, speed_meter_img);
 
     trans.translate(speed_meter_img.width()/2, speed_meter_img.height()/2);
     trans.rotate(rot_cnt);

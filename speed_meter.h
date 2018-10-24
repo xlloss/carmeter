@@ -1,26 +1,28 @@
-#ifndef WIDGET_H
-#define WIDGET_H
+#ifndef SPEED_METER_H
+#define SPEED_METER_H
 
 #include <QWidget>
 #include <QImage>
 
 namespace Ui {
-class Widget;
+class SpeedMeter;
 }
 
-class Widget : public QWidget
+class SpeedMeter : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Widget(QWidget *parent = 0);
-    ~Widget();
+    explicit SpeedMeter(QWidget *parent = 0);
+    ~SpeedMeter();
     QPixmap speed_meter_img;
     QImage speed_need_img;
     QBrush bg_img;
 
     int rot_cnt;
     int rot_dir;
+    int width;
+    int height;
 
 protected:
     void paintEvent(QPaintEvent *);
@@ -29,7 +31,7 @@ private slots:
         void timout_update();
 
 private:
-    Ui::Widget *ui;
+    Ui::SpeedMeter *ui;
 };
 
 #endif // WIDGET_H
