@@ -15,6 +15,8 @@ public:
     explicit MainForm(QWidget *parent = 0);
     ~MainForm();
     class SpeedMeter *speedmeter;
+    class SpeedMeter *mph_speedmeter;
+    QPixmap mianform_bg_img;
 
 private:
     Ui::MainForm *ui;
