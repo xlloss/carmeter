@@ -4,5 +4,9 @@
         <file>png_rec/NeedleBg.png</file>
         <file>png_rec/SpeedMeterBg.png</file>
         <file>png_rec/QML_mask.jpg</file>
+        <file>png_rec/left_turnsignal_off.png</file>
+        <file>png_rec/left_turnsignal_on.png</file>
+        <file>png_rec/right_turnsignal_off.png</file>
+        <file>png_rec/right_turnsignal_on.png</file>
     </qresource>
 </RCC>

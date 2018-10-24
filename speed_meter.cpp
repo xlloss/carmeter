@@ -24,7 +24,7 @@ SpeedMeter::SpeedMeter(QWidget *parent) :
     QWidget(parent)
     //,ui(new Ui::SpeedMeter)
 {
-    timer = new QTimer(this);;
+    timer = new QTimer(this);
 
     connect(timer, SIGNAL(timeout()), this, SLOT(timout_update()));
 //    timer->start(10);

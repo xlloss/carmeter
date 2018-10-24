@@ -16,6 +16,8 @@ public:
     ~MainForm();
     class SpeedMeter *speedmeter;
     class SpeedMeter *mph_speedmeter;
+    class turn_signal *r_trunsignal;
+    class turn_signal *l_trunsignal;
     QPixmap mianform_bg_img;
 
 private:
