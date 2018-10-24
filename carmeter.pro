@@ -26,15 +26,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         speed_meter.cpp \
-    mainform.cpp
+    mainform.cpp \
+    turn_signal.cpp
 
 HEADERS += \
         speed_meter.h \
-    mainform.h
+    mainform.h \
+    turn_signal.h
 
 FORMS += \
         speed_meter.ui \
-    mainform.ui
+    mainform.ui \
+    turn_signal.ui
 
 RESOURCES += \
     png_file.qrc
